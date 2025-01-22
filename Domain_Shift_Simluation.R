@@ -101,7 +101,7 @@ generate_statistics<-function(clustering_object,niter,nreps,theoretical_groups,d
       #clustering_object = SBMC_lowdim_lowsig
       #niter = 200
       #burn_in = floor(niter/2)
-      daul_num<-dauls_method(clustering_object[[i]],niter = niter, burn_in = floor(niter/2))
+      daul_num<-dahls_method(clustering_object[[i]],niter = niter, burn_in = floor(niter/2))
       randint_vec[i]<-fossil::adj.rand.index(clustering_object[[i]][[daul_num]]$zout,theoretical_groups )
       print(daul_num)
     }
