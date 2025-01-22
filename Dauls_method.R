@@ -4,7 +4,7 @@
 
 
 
-dauls_method<-function(myMCMC, niter, burn_in){
+dahls_method<-function(myMCMC, niter, burn_in){
 
   n<-length(myMCMC[[1]]$zout)
   daul_array<-array(data = NA, dim = c(n,n,niter - burn_in))
